@@ -165,17 +165,21 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.crda.sh \
-    init.qcom.bt.sh \
-    init.qcom.coex.sh \
-    fstab.qcom
-
-PRODUCT_PACKAGES += \
-    init.qcom.rc \
+    init.class_main.sh \
+    init.mdm.sh \
+    init.qcom.bms.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.sh \
+    init.qcom.syspart_fixup.sh \
+    init.qcom.usb.sh \
+    init.carrier.rc \
+    init.qcom.factory.rc \
     init.qcom.power.rc \
+    init.qcom.rc \
     init.qcom.usb.rc \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.recovery.qcom.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
