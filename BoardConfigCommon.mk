@@ -31,13 +31,19 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 
+ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_NEON := true
+
 # Properties
 TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
+TARGET_NO_RADIOIMAGE := true
+TARGET_HARDWARE_3D := false
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
+BOARD_USES_GENERIC_AUDIO := true
 AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
@@ -54,6 +60,8 @@ MALLOC_IMPL := dlmalloc
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+# Enables CSVT
+TARGET_USES_CSVT := true
 
 # Dex
 ifeq ($(HOST_OS),linux)
@@ -73,6 +81,7 @@ TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
+GET_FRAMEBUFFER_FORMAT_FROM_HWC := true
 
 # FM
 AUDIO_FEATURE_ENABLED_FM := true
@@ -91,6 +100,7 @@ TARGET_POWERHAL_VARIANT := qcom
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -109,6 +119,7 @@ BOARD_SEPOLICY_UNION += \
     bluetooth_loader.te \
     healthd.te \
     qseecomd.te \
+    sdcardd.te \
     surfaceflinger.te \
     wcnss_service.te \
     file_contexts \
