@@ -45,4 +45,4 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
 #----------------------------------------------------------------------
 # extra images
 #----------------------------------------------------------------------
-include build/core/generate_extra_images.mk
+#include build/core/generate_extra_images.mk
