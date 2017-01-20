@@ -117,11 +117,15 @@ BOARD_SEPOLICY_DIRS += \
     $(VENDOR_PATH)/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    atfwd.te \
     bluetooth_loader.te \
     healthd.te \
+    init.te \
+    init_shell.te \
     qseecomd.te \
     sdcardd.te \
     surfaceflinger.te \
+    usb_uicc_daemon.te \
     wcnss_service.te \
     file_contexts \
     property_contexts
