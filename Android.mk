@@ -25,4 +25,8 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 
+# Create a symlink for the wifi module
+$(shell mkdir -p $(TARGET_OUT)/system/lib/module/pronto; \
+    ln -sf /system/lib/module/wlan.ko \
+$(TARGET_OUT)/system/lib/module/pronto/pronto_wlan.ko)
 endif
