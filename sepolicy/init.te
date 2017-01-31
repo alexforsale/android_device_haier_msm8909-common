@@ -2,3 +2,5 @@ allow init firmware_file:dir mounton;
 allow init system_file:dir write;
 allow init system_file:file setattr;
 allow init system_file:dir add_name;
+allow init fuse:dir write;
+allow init system_file:file create;

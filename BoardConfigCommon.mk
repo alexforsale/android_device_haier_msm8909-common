@@ -137,6 +137,7 @@ BOARD_SEPOLICY_UNION += \
     qseecomd.te \
     sdcardd.te \
     surfaceflinger.te \
+    system_server.te \
     usb_uicc_daemon.te \
     wcnss_service.te \
     file_contexts \
